@@ -16,4 +16,4 @@ parts:
 
   - caption: Multiscale Methods
     chapters:
-      # - file: notebooks/python_intro
+      - file: notebooks/comp_mech_intro
