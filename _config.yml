@@ -6,9 +6,9 @@
 
 #######################################################################################
 # Book settings
-title: Computational Mechanics
+title: ""
 author: thangckt
-# logo: ./notebooks/1images/monkey.png
+logo: ./notebooks/1images/monkey.png
 
 #######################################################################################
 # Execution settings
@@ -18,8 +18,8 @@ execute:
 
 
 # Add a bibtex file so that we can create citations
-# bibtex_bibfiles:
-#   - notebooks/references.bib
+bibtex_bibfiles:
+  - notebooks/references.bib
 
 #######################################################################################
 # Parse and render settings
