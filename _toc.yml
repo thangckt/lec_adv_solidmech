@@ -5,7 +5,6 @@ parts:
     chapters:
     - file: notebooks/comp_mech_intro
     - file: notebooks/cfd_intro
-    -
 
 
   - caption: ML in Computational Mechanics
