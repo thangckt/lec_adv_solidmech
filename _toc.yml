@@ -4,16 +4,16 @@ parts:
   - caption: Computational Mechanics
     chapters:
     - file: notebooks/comp_mech_intro
-    - file: notebooks/cfd_intro
-    - file: notebooks/ml_intro
+  #   - file: notebooks/cfd_intro
+  #   - file: notebooks/ml_intro
 
 
-  - caption: ML in Computational Mechanics
-    chapters:
-    - file: notebooks/system_setup
+  # - caption: ML in Computational Mechanics
+  #   chapters:
+  #   - file: notebooks/system_setup
 
 
 
-  - caption: Multiscale Methods
-    chapters:
-      - file: notebooks/multiscale_intro
+  # - caption: Multiscale Methods
+  #   chapters:
+  #     - file: notebooks/multiscale_intro
