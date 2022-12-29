@@ -1,18 +1,43 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+### ----------------------------------------------------------------------------
+## data file
+### ----------------------------------------------------------------------------
+*.cfg
+# *.dat
+# *.xyz
 
-# Other files and folders
-.settings/
+### ----------------------------------------------------------------------------
+###  Python, python-jupyter stuff
+### ----------------------------------------------------------------------------
+## goodsync ignore
+**/_gsdata_/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+## python-jupyter stuff
+**/.ipynb_checkpoints/
+**/__pycache__/
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+## tmp file due to office: ~$_*.doc,  ~$_*.ppt
+**/~*.*
+
+## build docs
+_build/
+
+
+### ---------------------------------------------------------------------------
+### Latex tool auxiliary files:
+### ---------------------------------------------------------------------------
+# **/Zoutdir/   # this igores "folder"
+## this igores "files" in folder
+**/Zoutdir/*
+**/auxDIR/
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+
+
+### ----------------------------------------------------------------------------
+### Do not take effect these files
+### ----------------------------------------------------------------------------
+## note to only igore "files" in folder `/Zoutdir/`
+# !**/Zoutdir/*.pdf
+!**/Zoutdir/*.bbl
