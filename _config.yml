@@ -86,5 +86,5 @@ sphinx:
     # mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     # html_js_files: https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     html_theme_options:
-      repository_url: "https://github.com/thangckt/note_comp_mech"
+      repository_url: https://github.com/thangckt/note_comp_mech
       use_download_button: false   # https://github.com/executablebooks/jupyter-book/issues/1186
