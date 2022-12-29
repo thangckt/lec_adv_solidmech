@@ -10,10 +10,10 @@ parts:
 
   - caption: ML in Computational Mechanics
     chapters:
-    - file: notebooks/python_intro
+    - file: notebooks/ml_comp_mech_intro
     - file: notebooks/system_setup
 
 
   - caption: Multiscale Methods
     chapters:
-      - file: notebooks/python_intro
+      # - file: notebooks/python_intro
