@@ -9,7 +9,7 @@ parts:
 
   - caption: ML in Computational Mechanics
     chapters:
-    - file: notebooks/ml_comp/ml_intro
+    - file: notebooks/ml_comp/ml_comp_intro
 
 
 
