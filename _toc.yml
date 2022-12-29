@@ -3,16 +3,16 @@ root: README
 parts:
   - caption: Computational Mechanics
     chapters:
-    - file: notebooks/comp_mech_intro
-    - file: notebooks/cfd_intro
+    - file: notebooks/computational/comp_mech_intro
+    - file: notebooks/computational/cfd_intro
 
 
   - caption: ML in Computational Mechanics
     chapters:
-    - file: notebooks/ml_intro
+    - file: notebooks/ml_comp/ml_intro
 
 
 
   - caption: Multiscale Methods
     chapters:
-      - file: notebooks/multiscale_intro
+      - file: notebooks/mulstiscale/multiscale_intro
