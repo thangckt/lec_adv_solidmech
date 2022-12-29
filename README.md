@@ -1,2 +1,3 @@
-# lec_adv_solidmech
-Advanced Solid Mechanics - Prof. Kim
+# Notes on Computational Mechanics and Multiscale methods
+
+Thang's Notes
