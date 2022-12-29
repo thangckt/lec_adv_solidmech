@@ -4,7 +4,8 @@ parts:
   - caption: Computational Mechanics
     chapters:
     - file: notebooks/computational/comp_mech_intro
-    - file: notebooks/computational/cfd_intro
+    - file: notebooks/computational/initial_value_problem
+    - file: notebooks/computational/boundary_value_problem
 
 
   - caption: ML in Computational Mechanics
