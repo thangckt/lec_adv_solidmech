@@ -8,7 +8,11 @@ parts:
     - file: notebooks/computational/boundary_value_problem
 
 
-  - caption: ML in Computational Mechanics
+  - caption: Introduction ML and DL
+    chapters:
+    - file: notebooks/intro_ml_dl/ml_intro
+
+  - caption: ML in Comp Mech
     chapters:
     - file: notebooks/ml_comp/ml_comp_intro
     - file: notebooks/ml_comp/ml_intro
