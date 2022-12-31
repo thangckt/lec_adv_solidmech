@@ -1,15 +1,21 @@
 # --find-links https://download.pytorch.org/whl/torch_stable.html
-# torch==1.12.1+cpu
+torch==1.12.1
 matplotlib
 numpy
 pandas
 # jupyterlab
-# scikit-learn
+scikit-learn
 # git+https://github.com/FlowModelingControl/flowtorch.git@aweiner
+# git+https://github.com/whitead/dmol-book/tree/main/package
+dmol-book
+seaborn
+jaxlib
+rdkit
+"jax[cpu]===0.3.14" -f https://whls.blob.core.windows.net/unstable/index.html --use-deprecated legacy-resolver
+
 
 
 ## Work with jupyter-book==0.11.3 + jinja2==3.0.0
 jupyter-book     # ==0.11.3
 jinja2           #==3.0.0
 ghp-import
-torch==1.12.1
