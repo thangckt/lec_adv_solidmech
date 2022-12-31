@@ -1,4 +1,5 @@
 # --find-links https://download.pytorch.org/whl/torch_stable.html
+## pip install "jax[cpu]===0.3.14" -f https://whls.blob.core.windows.net/unstable/index.html --use-deprecated legacy-resolver
 torch==1.12.1
 matplotlib
 numpy
@@ -11,8 +12,8 @@ dmol-book
 seaborn
 jaxlib
 rdkit
-"jax[cpu]===0.3.14" -f https://whls.blob.core.windows.net/unstable/index.html --use-deprecated legacy-resolver
 
+myst_nb
 
 
 ## Work with jupyter-book==0.11.3 + jinja2==3.0.0
