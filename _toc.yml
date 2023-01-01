@@ -11,6 +11,8 @@ parts:
   - caption: Basics of ML and DL
     chapters:
     - file: notebooks/intro_ml_dl/1_ml_introduction
+    - file: notebooks/intro_ml_dl/2_regression
+
 
   - caption: ML in Comp Mech
     chapters:
