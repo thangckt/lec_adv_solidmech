@@ -10,13 +10,13 @@ parts:
 
   - caption: Basics of ML & DL
     chapters:
-    - caption: Machine Learning
-    section:
-      - file: notebooks/ml_dl/1_ml_overview
-      - file: notebooks/ml_dl/2_regression
+      - caption: Machine Learning
+      section:
+        - file: notebooks/ml_dl/1_ml_overview
+        - file: notebooks/ml_dl/2_regression
 
-    - caption: Deep Learning
-    section:
+      - caption: Deep Learning
+      section:
 
 
   - caption: ML in Comp Mech
