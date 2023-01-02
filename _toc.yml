@@ -11,12 +11,12 @@ parts:
   - caption: Basics of ML & DL
     chapters:
       - file: notebooks/ml_dl/1_0_ml_overview
-        section:
+        sections:
           - file: notebooks/ml_dl/1_1_ml_getstart
           - file: notebooks/ml_dl/1_2_regression
 
       - file: notebooks/ml_dl/2_0_dl_overview
-        section:
+        sections:
           - file: notebooks/ml_dl/2_1_regression
 
 
