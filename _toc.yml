@@ -18,6 +18,7 @@ parts:
       - file: notebooks/ml_dl/2_0_dl_overview
         sections:
           - file: notebooks/ml_dl/2_1_dl_neural_network
+          - file: notebooks/ml_dl/2_2_layers
 
 
   - caption: ML in Comp Mech
