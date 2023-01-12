@@ -8,17 +8,7 @@ parts:
     - file: notebooks/computational/boundary_value_problem
 
 
-  - caption: Basics of ML & DL
-    chapters:
-      - file: notebooks/ml_dl/1_0_ml_overview
-        sections:
-          - file: notebooks/ml_dl/1_1_ml_supervised_unsuppersives
-          - file: notebooks/ml_dl/1_2_regression
 
-      - file: notebooks/ml_dl/2_0_dl_overview
-        sections:
-          - file: notebooks/ml_dl/2_1_dl_neural_network
-          - file: notebooks/ml_dl/2_2_layers
 
 
   - caption: ML in Comp Mech
@@ -31,3 +21,11 @@ parts:
   - caption: Multiscale Methods
     chapters:
       - file: notebooks/mulstiscale/multiscale_intro
+
+
+  - caption: Free Energy Calculation
+    chapters:
+      - file: notebooks/free_energy/free_energy_calcuation_overview
+      - file: notebooks/free_energy/ti_method
+      - file: notebooks/free_energy/enhanced_sampling_method
+      - file: notebooks/free_energy/ml_cv
