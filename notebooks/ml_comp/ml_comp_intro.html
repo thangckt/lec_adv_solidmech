@@ -1,0 +1,906 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Overview</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/full_width.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../_static/monkey.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Introduction to machine learning" href="ml_intro.html" />
+    <link rel="prev" title="Initial Value Problems" href="../computational/boundary_value_problem.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/monkey.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Computational Mechanics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../computational/comp_mech_intro.html">
+   Introduction to Comptational Mechanics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../computational/initial_value_problem.html">
+   Initial Value Problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../computational/boundary_value_problem.html">
+   Initial Value Problems
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ML in Comp Mech
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ml_intro.html">
+   Introduction to machine learning
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/thangckt/note_comp_mech/edit/main/notebooks/ml_comp/ml_comp_intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-combine-computational-and-ml">
+   Why combine Computational and ML?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-problems-that-ml-solves">
+   Types of problems that ML solves
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#supervised-learning">
+     Supervised learning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unsupervised-learning">
+     Unsupervised learning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reinforcement-learning">
+     Reinforcement learning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-types-of-learning">
+     Other types of learning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenges-encountered-in-ml">
+   Challenges encountered in ML
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-combine-computational-and-ml">
+   How to combine Computational and ML
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trends-in-ml">
+   Trends in ML
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#physics-informed-neural-networks-pinns">
+     Physics-informed neural networks (PINNs)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-neural-network-architectures">
+     Advanced neural network architectures
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#framework-choice">
+   Framework Choice
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Overview</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-combine-computational-and-ml">
+   Why combine Computational and ML?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-problems-that-ml-solves">
+   Types of problems that ML solves
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#supervised-learning">
+     Supervised learning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unsupervised-learning">
+     Unsupervised learning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reinforcement-learning">
+     Reinforcement learning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-types-of-learning">
+     Other types of learning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenges-encountered-in-ml">
+   Challenges encountered in ML
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-combine-computational-and-ml">
+   How to combine Computational and ML
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trends-in-ml">
+   Trends in ML
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#physics-informed-neural-networks-pinns">
+     Physics-informed neural networks (PINNs)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-neural-network-architectures">
+     Advanced neural network architectures
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#framework-choice">
+   Framework Choice
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h1>
+<p>Deep learning is specifically about connecting some input data (features) and output data (labels) with a neural network function. Neural networks are differentiable and able to approximate any function.</p>
+<section id="why-combine-computational-and-ml">
+<h2>Why combine Computational and ML?<a class="headerlink" href="#why-combine-computational-and-ml" title="Permalink to this headline">#</a></h2>
+<p><strong>Simulations produce massive amounts of data.</strong> The most demanding type of simulation is a so-called <em>direct numerical simulation</em> (DNS). DNS focuses on resolving all spatial and temporal scales. Finding patterns in such data to create insights or <em>compact representations</em> is usually not possible by means of a simple visual inspection but requires automated processing. “Insights” is a relatively broad term. What it usually means is that we want to find a relatively simple explanation or <em>model</em> for a phenomenon.</p>
+<p>Why are simple representations (insights) important? Besides the sheer pleasure of finding such patterns, they may be relevant for optimizing technical applications. On the one hand side, a simple model of a phenomenon can guide us to modify our application such that the phenomenon is avoided.</p>
+<p>ML is a key technique to discover such simplified models.</p>
+<p><strong>Simulations require data and representations thereof</strong> DNS requires some data as input to produce meaningful outputs. As we introduce more physical models in our simulation, the number of closure models and tunable parameters increases. The free parameters must be tuned based on available data sources. Often, a compromise must be found between the complexity of a model and its ability to reflect the data.</p>
+<p>But also boundary and initial conditions must be known. If these conditions are oversimplified, we can not expect to find good agreement with real flows. If experimental or high-fidelity numerical data is available, we could use that data to create a much more realistic simulation setup and improve the accuracy of our results. However, mapping a data source to the target application is not always straightforward because the data might contain noise or they might be simply too large to deal with them a the run time of the simulation.</p>
+<p>Again, ML is a suitable tool because it allows creating representations of data that are much more convenient to use in other applications.</p>
+</section>
+<section id="types-of-problems-that-ml-solves">
+<h2>Types of problems that ML solves<a class="headerlink" href="#types-of-problems-that-ml-solves" title="Permalink to this headline">#</a></h2>
+<p>Solving problems in computational mechanics typically involves mathematical, physical, and numerical modeling. Not all of these tasks are solved by ML.</p>
+<ul class="simple">
+<li><p>Data must be available or it must be possible to generate them.</p></li>
+<li><p>There is a relatively fixed set of problems that ML solves.</p></li>
+</ul>
+<p>It is useful to have a simple mind map to remember these problems or learning categories.</p>
+<section id="supervised-learning">
+<h3>Supervised learning<a class="headerlink" href="#supervised-learning" title="Permalink to this headline">#</a></h3>
+<p>Supervised learning deals with two types of tasks: <strong>regression</strong> and <strong>classification</strong>. For both tasks, we need examples of a given input and the expected output. The input values are typically called <strong>features</strong>. The expected output values are termed <strong>labels</strong>. In supervised ML, we create <em>a mapping from the feature to the label space</em> based on the examples we have. Then, there are two cases:</p>
+<ul class="simple">
+<li><p>If the variable of interest is continuous, the learning task is called <em>regression</em>.</p></li>
+<li><p>In contrast, <em>classification</em> deals with the prediction of categorical variables.</p></li>
+</ul>
+<p>In the figure below, the plot on the left side depicts a typical regression problem. We have a dataset containing the drag coefficient recorded for different Reynolds numbers. The Reynolds number is the feature and the drag coefficient is the label in this example. A simple ML model could now be trained to make predictions similar to the red dashed line. On the right side, we have a typical classification problem. The dataset consists of two features, the Reynolds number and the angle of attack, and a categorical label with the categories being <em>laminar</em> and <em>turbulent</em>. A classification model could now learn to predict the correct category for a given input pair of Reynolds number and angle of attack. Internally, the model would learn some representation of the dividing line depicted in red.</p>
+<img alt="../../_images/regression_classification.svg" src="../../_images/regression_classification.svg" /></section>
+<section id="unsupervised-learning">
+<h3>Unsupervised learning<a class="headerlink" href="#unsupervised-learning" title="Permalink to this headline">#</a></h3>
+<p>Unsupervised learning also solves two types of problems, namely <strong>dimensionality reduction</strong> and <strong>clustering</strong>. No clear distinction between features and labels must be known to apply unsupervised learning algorithms.</p>
+<ul class="simple">
+<li><p>Dimensionality reduction techniques aim to find more suitable coordinate systems, which allow to represent the data with <em>fewer coordinates</em> than the number of natural coordinates the data are provided. In the example problem depicted below, we could replace the natural coordinates the data are given in, <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>, with a single coordinate <span class="math notranslate nohighlight">\(y_1\)</span> if we are willing to accept a small information loss. By storing the data in the reduced coordinate system, every data point would be represented by its <span class="math notranslate nohighlight">\(y_1\)</span> value, which corresponds to the orthogonal projection of each point onto <span class="math notranslate nohighlight">\(y_1\)</span>. Of course, we would lose the information about the distance to the <span class="math notranslate nohighlight">\(y_1\)</span> axis, for which we would need a second coordinate <span class="math notranslate nohighlight">\(y_2\)</span> orthogonal to <span class="math notranslate nohighlight">\(y_1\)</span>. However, sometimes it can be even advantageous to lose information, for example, if the deviation normal to <span class="math notranslate nohighlight">\(y_1\)</span> was actually some measurement noise. In that case, reducing the dimensionality would also reduces the noise in the data. Also the second type of unsupervised learning, clustering, may be used to remove spurious data.</p></li>
+<li><p>In clustering, we define a metric to measure the distance between data points in the feature space. Groups of points close to one another form so-called clusters. For the example on the right side in the figure below, we could use the Euclidean distance between points in the plane spanned by <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>. Clustering may be used to find isolated points that do not really belong to any of the other clusters (they form their own cluster with only one point in it). Finding those point might be interesting because they may represent outliers (unwanted data), which we want to remove or avoid.</p></li>
+</ul>
+<img alt="../../_images/unsupervised.svg" src="../../_images/unsupervised.svg" /></section>
+<section id="reinforcement-learning">
+<h3>Reinforcement learning<a class="headerlink" href="#reinforcement-learning" title="Permalink to this headline">#</a></h3>
+<p>In reinforcement learning, our aim is to <em>solve control problems</em>. On the top-level, the reinforcement learning setting consists of two elements, the <strong>agent</strong> and the <strong>environment</strong>.</p>
+<ul class="simple">
+<li><p>The agent is basically the controller we want to optimize.</p></li>
+<li><p>The environment is defined by a state and an intrinsic goal. The intrinsic goal is expressed by the environment as a so-called reward signal.</p></li>
+</ul>
+<p>A typical goal in fluid mechanics would be to reduce the drag force acting on a body. From an engineering perspective, we would probably not associate drag reduction as an intrinsic goal of the object the force is acting on, but we will stick to this notion, since it is the standard way to formulate reinforcement learning problems. The agent has a mean of acting on the environment such that the environment’s state changes. The agent choses its action based on a set of rules and the current state of the environment. This set of rules is also called <em>policy</em>. At the beginning of the learning process, the policy is unlikely to be optimal. However, thanks to the reward signal provided by the environment, the agent has data to improve its policy. Coming back to the flow control problem, the environment’s state might be defined by pressure probes taken on the object’s surface. The reward signal would be some function based on the currently acting drag force. The function would return high values if the drag force is low and low values if the drag force is high, because we want to maximize the cumulatively received rewards (by definition). The agent’s action could be to inject mass somewhere on the object’s surface by opening a valve. The policy would be the actual control law that tells us, based on the currently measured pressure value, when to open or close the valves such that the drag forces becomes minimal.</p>
+<img alt="../../_images/reinforcement.svg" src="../../_images/reinforcement.svg" /></section>
+<section id="other-types-of-learning">
+<h3>Other types of learning<a class="headerlink" href="#other-types-of-learning" title="Permalink to this headline">#</a></h3>
+<p>Of course, it is also possible to combine different types of learning to solve a problem. One example is semi-supervised learning, where a few feature-labels-pairs are provided initially to associate elements in an unlabeled dataset with the most suitable label, e.g, by clustering.</p>
+</section>
+</section>
+<section id="challenges-encountered-in-ml">
+<h2>Challenges encountered in ML<a class="headerlink" href="#challenges-encountered-in-ml" title="Permalink to this headline">#</a></h2>
+<p>Of course, ML does not come for free and introduces new challenges. The <em>learning</em> in ML is nothing but the <em>optimization of free parameters based on data</em>.</p>
+<ul class="simple">
+<li><p>This optimization is often high-dimensional and non-linear.</p></li>
+<li><p>One has to deal with potential flaws in the datasets like spurious or missing values.</p></li>
+<li><p>Another challenge is the assessment of the ML model’s predictive quality. It might be that the models reflect the dataset extremely well while failing to interpolate between the data points. The latter scenario would be called <em>over-fitting</em> in ML terminology.</p></li>
+</ul>
+<p>Luckily, there are well-established techniques to deal with non-linear optimization and over-fitting. However, a good rule of thumb is that all ML-related problems become much easier to deal with <em>if there is enough data and the data are of high quality</em>.</p>
+</section>
+<section id="how-to-combine-computational-and-ml">
+<h2>How to combine Computational and ML<a class="headerlink" href="#how-to-combine-computational-and-ml" title="Permalink to this headline">#</a></h2>
+<p>In the examples provided in the previous sections, ML modeling interacted in different ways with the CFD simulation. There are typical processing pipelines to categorize this interaction. These categories are sketched below.</p>
+<p><strong>ML as post-postprocessing tool</strong>
+The most common and natural workflow is to use ML as a means for post-processing the simulation data. The simulation generates characteristic flow data like velocity, pressure, or temperature field but also secondary data like forces acting on objects or the heat flux through a wall. ML could then be used to create a regression model, e.g., to predict the heat flux based on the inflow velocity, or to extract patterns from the flow fields, e.g, by finding coherent structures in turbulent flows by means of dimensionality reduction.</p>
+<img alt="../../_images/data_workflows_2.svg" src="../../_images/data_workflows_2.svg" /><p><br />
+<strong>Use ML generate input data for simulation</strong>
+A second typical workflow is to create a representation of an available dataset such that we can use the data/model to improve the simulation. A potential scenario might be that particle image velocimetry (PIV) provides a time series of velocity vectors in one plane of the experiment. Let’s say we also want to perform a CFD simulation of the experimental setup to obtain 3D velocity and pressure fields in addition to the PIV data. We could now train a regression model that learns to predict the inlet velocity for the simulation as a function of time based on the PIV data. The model would be very simple to evaluate, perform interpolation tasks for us, and could potentially also remove some of the noise in the experimental data. Realistic initial and boundary conditions are essential to find good agreement with experimental data.</p>
+<img alt="../../_images/data_workflows_1.svg" src="../../_images/data_workflows_1.svg" /><p><br />
+<strong>Computational-ML pipeline</strong>
+Of course, both of the workflows outlined before can be combined and repeated in some kind of Computational-ML pipeline. A typical scenario for such a pipeline would be <em>scale-up modeling</em>. Scale-up modeling starts with a limited range of small scales being investigated with dedicated numerical tools. These tool resolve phenomena with great detail and require little modeling. In the next step, the range of investigated scales is extended. Small scales are modeled based on the previously conducted small scale investigations. Then, the range of scales is extended again and this process continues until the full range of scales is reached. In the field of multiphase flow reactors, the pipeline of simulation tools might look as follows:</p>
+<ol class="simple">
+<li><p>single-phase simulations of reactive boundary layers</p></li>
+<li><p>particle-resolved multiphase simulations of individual fluid particles with reactive mass transfer</p></li>
+<li><p>Euler-Lagrange simulations with the fluid particles being abstracted as point-particles</p></li>
+<li><p>Euler-Euler simulations with transport equations for gas-liquid mixtures</p></li>
+</ol>
+<p>ML can be used in this pipeline to transport information from one simulation approach to the next.</p>
+<img alt="../../_images/data_workflows_3.svg" src="../../_images/data_workflows_3.svg" /><p><br />
+<strong>Computationl-ML Intergration</strong>
+The last workflow presented here is slightly different from the previous ones. The simulation generates data based on which a ML model is trained. The model is then used in the simulation to generate new data based on which the previous model is further improved. The iterative process is typical for reinforcement learning or direct shape optimization.</p>
+<img alt="../../_images/data_workflows_4.svg" src="../../_images/data_workflows_4.svg" /></section>
+<section id="trends-in-ml">
+<h2>Trends in ML<a class="headerlink" href="#trends-in-ml" title="Permalink to this headline">#</a></h2>
+<section id="physics-informed-neural-networks-pinns">
+<h3>Physics-informed neural networks (PINNs)<a class="headerlink" href="#physics-informed-neural-networks-pinns" title="Permalink to this headline">#</a></h3>
+<p>The term physics-informed neural network (PINN) was first coined by <a class="reference external" href="https://arxiv.org/abs/1711.10561">M. Raissi et al. (2017)</a>. However, the basic concept of PINNs was already introduced in <a class="reference external" href="https://arxiv.org/abs/physics/9705023">I. E. Lagaris et al. (1997)</a> about 20 years earlier. There exists a large body of literature concerned with the approximate solution of ordinary differential equations (ODEs), partial differential equations (PDEs), and systems of ODEs and PDEs in various disciplines. However, with the publication of libraries like Tensorflow in 2014 and PyTorch in 2017, the concept of transforming an initial/boundary value problem into an optimization problem became significantly easier to implement. Some of main improvements of the last decade enabling PINNs are:</p>
+<ul class="simple">
+<li><p>powerful automatic differentiation engines (backpropagation)</p></li>
+<li><p>affordable and fast hardware accelerators (GPUs, TPUs)</p></li>
+<li><p>ability to train deep neural networks (weight initialization, batch normalization, optimizer)</p></li>
+<li><p>libraries with high-level abstractions for building and training neural networks.</p></li>
+</ul>
+<p>In this course, we do not make use of PINNs . Nonetheless, we introduce the core idea, since PINNs might become more relevant in future applications. Specifically, we do not even train a physics-informed <em>neural network</em> but a physics-informed <em>polynomial</em> for simplicity. The polynomial is not as flexible as the network, but the general steps to a find a solution are the same.</p>
+<p>Consider the following initial values problem:</p>
+<div class="math notranslate nohighlight">
+\[
+  \frac{\mathrm{d}x}{\mathrm{d}t} = -kx\quad \text{with}\quad x(t=0)=1\quad \text{and}\quad x\in\left[0, 1\right].
+\]</div>
+<p>The problem’s solution is</p>
+<div class="math notranslate nohighlight">
+\[
+  x(t) = \mathrm{exp}\left(-kx\right).
+\]</div>
+<p>Let’s start by plotting this function with Matplotlib. Moreover, we use PyTorch tensors as array data structure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">torch</span> <span class="k">as</span> <span class="nn">pt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">torch</span> <span class="k">as</span> <span class="nn">pt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="c1">### ============ Plot data</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.375</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$t$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ml_comp_intro_6_0.png" src="../../_images/ml_comp_intro_6_0.png" />
+</div>
+</div>
+<p>To plot the curve shown above, we evaluated the analytical function at 20 linearly spaced values of <span class="math notranslate nohighlight">\(t\)</span> between 0 and 1. Before implementing the concept of physics-informed training, we fit the polynomial in the classical ML fashion. To do so, let’s pretend that we do not know the analytical solution to the initial value problem, but we only know the 20 pairs of <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(t_i\)</span> used for plotting. In ML languange, <span class="math notranslate nohighlight">\(t\)</span> is the feature and <span class="math notranslate nohighlight">\(x\)</span> is the label. We have a training dataset of 20 feature-label pairs. We want to use this dataset to create a simple regression model. As ansatz, we use a polynomial of the form:</p>
+<div class="math notranslate nohighlight">
+\[
+  \hat{x}(t) = at^2+bt+1.
+\]</div>
+<p>Note that we set the intercept to 1 such that we do not have to worry about the initial condition. The model weights <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are found by solving the minimization problem:</p>
+<div class="math notranslate nohighlight">
+\[
+  \underset{a,b}{\mathrm{argmin}}(L(a,b)),
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(L(a,b)\)</span> is the so-called <em>loss function</em>. The loss function in ML describes how well the “current parameter configuration” represents the training data. A typical loss function for regression is the mean squared error (MSE). For the present problem, the MSE reads:</p>
+<div class="math notranslate nohighlight">
+\[
+  L(a,b) = \frac{1}{2N_p}\sum\limits_{i=1}^{N_p}\left(x_i - \hat{x}_i\right)^2,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(N_p\)</span> is the number of data points in the training dataset (20) and <span class="math notranslate nohighlight">\(\hat{x}_i = \hat{x}(t=t_i)\)</span> is the polynomial ansatz evaluated at <span class="math notranslate nohighlight">\(t_i\)</span>. One of the simplest algorithms to find the parameters leading to a minimal loss is <strong>gradient decent</strong>. In gradient decent, we compute the gradient of the loss function with respect to the weight and nudge the weights in the negative gradient direction. Employing the chain rule, the loss gradient is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+  \frac{\partial L}{\partial a} &amp;= \frac{1}{N_p}\sum\limits_{i=1}^{N_p}\left(x_i - \hat{x}_i\right) \left(-\frac{\partial \hat{x}_i}{\partial a}\right),\\
+  \frac{\partial L}{\partial b} &amp;= \frac{1}{N_p}\sum\limits_{i=1}^{N_p}\left(x_i - \hat{x}_i\right) \left(-\frac{\partial \hat{x}_i}{\partial b}\right).
+\end{align}
+\end{split}\]</div>
+<p>Let’s define these functions in code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">da_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">db_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">t</span>
+
+<span class="k">def</span> <span class="nf">data_loss</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x_true</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">x_true</span> <span class="o">-</span> <span class="n">ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">loss</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">data_loss_gradient</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x_true</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">x_true</span> <span class="o">-</span> <span class="n">ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">da_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">diff</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="n">da_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">db_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">diff</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="n">db_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">pt</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">da_loss</span><span class="p">,</span> <span class="n">db_loss</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the next cell, the weights <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are initialized with random values between 0 and 1. Then 5000 steps of gradient decent are performed to minimize the MSE loss. To visualize the optimization process, we save the loss and the weight configuration after every step.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pt</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span>
+<span class="n">data_loss_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">max_iter</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">data_weights_history</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">max_iter</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">data_weights_history</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">weights</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iter</span><span class="p">):</span>
+    <span class="n">weights</span> <span class="o">-=</span> <span class="mf">1.0</span><span class="o">*</span><span class="n">data_loss_gradient</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">weights</span><span class="p">)</span>
+    <span class="n">data_weights_history</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">weights</span>
+    <span class="n">data_loss_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_loss</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">weights</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### ============ Plot data</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.375</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_loss_values</span><span class="p">)),</span> <span class="n">data_loss_values</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;epoch&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;MSE loss&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ml_comp_intro_11_0.png" src="../../_images/ml_comp_intro_11_0.png" />
+</div>
+</div>
+<p>The optimal weights are found after about 5000 iterations (epochs). Note that there are plenty of advanced optimization algorithms, which could find the minimum much quicker. Let’s plot the optimized polynomial and compare it against the exact solution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.375</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;exact solution&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="o">*</span><span class="n">weights</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;polynomial fit (data)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$t$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ml_comp_intro_13_0.png" src="../../_images/ml_comp_intro_13_0.png" />
+</div>
+</div>
+<p>The agreement between polynomial and exact solution is acceptable considering that the model has only two adjustable parameters. An advantage of having only two parameters is also the possibility to visualize the loss function (loss landscape) and steps we undertook to get to the optimal solution. The loss landscape is plotted as a filled contour plot; see figure below. The red markers show the weight configuration after every 10th epoch.</p>
+<p>We could also plot the loss landscape as a <a class="reference external" href="https://matplotlib.org/stable/gallery/mplot3d/surface3d.html">surface plot</a> with the height being the loss value as a function of the weights <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. If you randomly pick any two points on the resulting surface and connect them by a straight line, you would notice that you never cut through the surface. Therefore, we say the loss function is <a class="reference external" href="https://en.wikipedia.org/wiki/Convex_function">convex</a>, and the problem we solved is a convex optimization problem.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_plot</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">b_plot</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">aa</span><span class="p">,</span> <span class="n">bb</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">a_plot</span><span class="p">,</span> <span class="n">b_plot</span><span class="p">)</span>
+<span class="n">loss_surface</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">aa</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">aa</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bb</span><span class="o">.</span><span class="n">flatten</span><span class="p">())):</span>
+    <span class="n">loss_surface</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_loss</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">loss_surface</span> <span class="o">=</span> <span class="n">loss_surface</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">aa</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\DevProgram\miniconda3\envs\py39ml\lib\site-packages\torch\functional.py:478: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  C:\b\abs_f0dma8qm3d\croot\pytorch_1669187301762\work\aten\src\ATen\native\TensorShape.cpp:2895.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">4.375</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">cont</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">loss_surface</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data_weights_history</span><span class="p">[::</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">data_weights_history</span><span class="p">[::</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">facecolors</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$a$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$b$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cont</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;log. MSE loss&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ml_comp_intro_16_0.png" src="../../_images/ml_comp_intro_16_0.png" />
+</div>
+</div>
+<p>Now let’s make the <em>polynomial physics-informed</em>! The core idea is to embed the initial value problem in the loss function. The same procedure also works for more complex initial boundary value problems. First, the ordinary differential equation (ODE) is re-written as:</p>
+<div class="math notranslate nohighlight">
+\[
+  \frac{\mathrm{d}x}{\mathrm{d}t} + kx = 0
+\]</div>
+<p>We now that the ODE must be fulfilled for any input <span class="math notranslate nohighlight">\(t\)</span>. Therefore, we can replace the variable <span class="math notranslate nohighlight">\(x\)</span> with the ansatz <span class="math notranslate nohighlight">\(\hat{x}\)</span>, evaluate the ansatz and its derivative with respect to <span class="math notranslate nohighlight">\(t\)</span> at selected control points in the interval between 0 and 1, and formulate the loss function in terms of the residual (if the ansatz fulfills the ODE perfectly the sum over all control points would always be zero):</p>
+<div class="math notranslate nohighlight">
+\[
+  L(a,b) = \frac{1}{2N_c}\sum\limits_{i=1}^{N_c}\left(\left.\frac{\mathrm{d}\hat{x}}{\mathrm{d}t}\right|_i + k\hat{x}_i\right)^2.
+\]</div>
+<p><span class="math notranslate nohighlight">\(N_c\)</span> is the number of control points, which is also 20 in this case since the same points <span class="math notranslate nohighlight">\(t_i\)</span> as for platting will be used. The term <span class="math notranslate nohighlight">\(\left.\frac{\mathrm{d}\hat{x}}{\mathrm{d}t}\right|_i\)</span> is the derivative of the polynomial with respect to <span class="math notranslate nohighlight">\(t\)</span> evaluated at <span class="math notranslate nohighlight">\(t_i\)</span>. Computing the gradient of the loss with respect to the weights becomes slightly more complex:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+  \frac{\partial L}{\partial a} &amp;= \frac{1}{N_c}\sum\limits_{i=1}^{N_c}\left(\left.\frac{\mathrm{d}\hat{x}}{\mathrm{d}t}\right|_i + k\hat{x}_i\right)\frac{\partial}{\partial a}\left(\left.\frac{\mathrm{d}\hat{x}}{\mathrm{d}t}\right|_i + k\hat{x}_i\right),\\
+  \frac{\partial L}{\partial b} &amp;= \frac{1}{N_c}\sum\limits_{i=1}^{N_c}\left(\left.\frac{\mathrm{d}\hat{x}}{\mathrm{d}t}\right|_i + k\hat{x}_i\right)\frac{\partial}{\partial b}\left(\left.\frac{\mathrm{d}\hat{x}}{\mathrm{d}t}\right|_i + k\hat{x}_i\right).
+\end{align}
+\end{split}\]</div>
+<p>The results for the last term in each derivative can be inferred from the functions implemented in the cell below. The rest of the optimization process is analogous to the classical regression approach.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dt_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">ode_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">dt_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">k</span><span class="o">*</span><span class="n">ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">da_ode_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">+</span><span class="n">k</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">db_ode_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">+</span><span class="n">k</span><span class="o">*</span><span class="n">t</span>
+
+<span class="k">def</span> <span class="nf">ode_loss</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">ode_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">loss</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">ode_loss_gradient</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">da_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">ode_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">da_ode_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">db_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">ode_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">db_ode_ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">pt</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">da_loss</span><span class="p">,</span> <span class="n">db_loss</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pt</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span>
+<span class="n">ode_loss_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">max_iter</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">weights_history</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">max_iter</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">weights_history</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">weights</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iter</span><span class="p">):</span>
+    <span class="n">weights</span> <span class="o">-=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">ode_loss_gradient</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="o">*</span><span class="n">weights</span><span class="p">)</span>
+    <span class="n">weights_history</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">weights</span>
+    <span class="n">ode_loss_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ode_loss</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="o">*</span><span class="n">weights</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.375</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ode_loss_values</span><span class="p">)),</span> <span class="n">ode_loss_values</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;epoch&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;MSE loss&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ml_comp_intro_20_0.png" src="../../_images/ml_comp_intro_20_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.375</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;exact solution&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="o">*</span><span class="n">data_weights_history</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;polynomial fit (data)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ansatz</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="o">*</span><span class="n">weights</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;polynomial fit (ODE)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$t$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ml_comp_intro_21_0.png" src="../../_images/ml_comp_intro_21_0.png" />
+</div>
+</div>
+<p>Both polynomial fits look very similar. How much the second polynomial is <em>informed</em> about the decay process is left to your interpretation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_plot</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">b_plot</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">aa</span><span class="p">,</span> <span class="n">bb</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">a_plot</span><span class="p">,</span> <span class="n">b_plot</span><span class="p">)</span>
+<span class="n">loss_surface</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">aa</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">aa</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bb</span><span class="o">.</span><span class="n">flatten</span><span class="p">())):</span>
+    <span class="n">loss_surface</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ode_loss</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">loss_surface</span> <span class="o">=</span> <span class="n">loss_surface</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">aa</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">4.375</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">cont</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">loss_surface</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">weights_history</span><span class="p">[::</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">weights_history</span><span class="p">[::</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">facecolors</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$a$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$b$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cont</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;log. MSE loss&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ml_comp_intro_24_0.png" src="../../_images/ml_comp_intro_24_0.png" />
+</div>
+</div>
+<p>Constraining the loss function based on physical relations is certainly a pleasing idea. However, if neural networks are used as ansatz, formulating the loss in terms of partial derivatives also introduces several new challenges, which are only briefly listed below:</p>
+<ul class="simple">
+<li><p>activation functions: if higher-order derivative with respect to the network’s input have to be computed, the number of possible activation functions is very limited (the derivative must not be zero); these activation functions cause so-called vanishing or exploding gradients, which have to be counteracted by other measures like batch normalization</p></li>
+<li><p>training and evaluating PINNs is slow due to multiple backpropagation loops (some algorithm to compute derivatives automatically) and the evaluation of many exponential functions</p></li>
+<li><p>fulfilling initial and boundary conditions requires additional terms in the loss function, for which suitable weighting factors must be determined</p></li>
+<li><p>generating training data and following the classical regression approach is typically faster and leads to more accurate models (even though they are not <em>informed</em>)</p></li>
+</ul>
+</section>
+<section id="advanced-neural-network-architectures">
+<h3>Advanced neural network architectures<a class="headerlink" href="#advanced-neural-network-architectures" title="Permalink to this headline">#</a></h3>
+<p>There is a zoo of neural network building blocks designed for tasks in speech recognition, computer vision, or translation. Most of these architectures are not particularly useful when combined with CFD applications. The focus of this lecture is on solving challenging problems in CFD with the aid of ML. The exact algorithm used to solve the ML part of the problem is secondary and, oftentimes, there are multiple suitable options available.</p>
+</section>
+</section>
+<section id="framework-choice">
+<h2>Framework Choice<a class="headerlink" href="#framework-choice" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://dmol.pub/">see here</a></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://thangckt.github.io/lec_ml_cfd/notebooks/ml_cfd_intro.html">Introduction ML in CFD</a></p></li>
+<li><p><a class="reference external" href="https://dmol.pub/#framework-choice">Deep Learning for Molecules &amp; Materials</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/&#64;ashish.iitr2015/comparison-between-pytorch-tensor-and-numpy-array-de41e389c213">Comparison between Pytorch Tensor and Numpy Array</a></p></li>
+<li><p><a class="reference external" href="https://www.simplilearn.com/keras-vs-tensorflow-vs-pytorch-article">Keras vs Tensorflow vs Pytorch: Key Differences</a></p></li>
+</ol>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/ml_comp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../computational/boundary_value_problem.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Initial Value Problems</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ml_intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to machine learning</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By thangckt<br/>
+  
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
